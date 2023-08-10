@@ -1,0 +1,77 @@
+for number in range(-10, 0):
+    print(number)
+
+#-----------------------------------------------------------------------------
+
+def find_largest_smallest(numbers):
+    if not numbers:
+        return None, None
+
+    largest = smallest = numbers[0]
+
+    for number in numbers:
+        if number > largest:
+            largest = number
+        elif number < smallest:
+            smallest = number
+
+    return largest, smallest
+
+# Example list of numbers
+num_list = [45, 67, 23, 89, 12, 56, 34]
+
+largest_num, smallest_num = find_largest_smallest(num_list)
+
+print("Largest number:", largest_num)
+print("Smallest number:", smallest_num)
+
+#-----------------------------------------------------------------------------
+
+# Example list of numbers
+num_list = [45, 67, 23, 89, 12, 56, 34]
+
+largest_num = max(num_list)
+smallest_num = min(num_list)
+
+print("Largest number:", largest_num)
+print("Smallest number:", smallest_num)
+
+#-----------------------------------------------------------------------------
+
+def count_letters_digits(input_string):
+    letters_count = 0
+    digits_count = 0
+
+    for char in input_string:
+        if char.isalpha():
+            letters_count += 1
+        elif char.isdigit():
+            digits_count += 1
+
+    return letters_count, digits_count
+
+# Example string
+input_str = "Hello123World456"
+
+letters, digits = count_letters_digits(input_str)
+
+print("Number of letters:", letters)
+print("Number of digits:", digits)
+
+#-----------------------------------------------------------------------------
+
+# Example string
+input_str = "Hello123World456"
+
+letters_count = sum(c.isalpha() for c in input_str)
+digits_count = sum(c.isdigit() for c in input_str)
+
+print("Number of letters:", letters_count)
+print("Number of digits:", digits_count)
+
+#-----------------------------------------------------------------------------
+
+x = lambda a: a + 5
+print(x(5))
+
+print("My first python program")
